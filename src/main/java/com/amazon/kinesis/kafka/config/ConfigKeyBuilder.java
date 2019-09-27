@@ -7,6 +7,7 @@ import org.apache.kafka.common.config.ConfigDef.Type;
 import org.apache.kafka.common.config.ConfigDef.Validator;
 import org.apache.kafka.common.config.ConfigDef.Width;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ConfigKeyBuilder {
@@ -30,6 +31,7 @@ public class ConfigKeyBuilder {
 
     public ConfigKeyBuilder type(Type type) {
         this.type = type;
+        this.dependents = Collections.emptyList();
         return this;
     }
 
